@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "gameminner bot",
+  "description": "auto enter",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "js": [ "JQ.js","run.js" ],
+      "matches": [ "http://gameminer.net/?q*" ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "http://gameminer.net/*","background","browsingData","webRequest"
+  ],
+  "browser_action": {
+  }
+}
